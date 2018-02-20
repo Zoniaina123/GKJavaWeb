@@ -61,10 +61,23 @@ public class MyServlet extends HttpServlet {
 	System.out.println("\nprocessing getParameterNames\n");
 	while (params.hasMoreElements()) {
 		String key =params.nextElement();
-		System.out.println("parameter: "+key + ",value: "+ request.getParameter(key));
+		System.out.println("parameter> "+key + " :  "+ request.getParameter(key));	
 	}
+	
+
+	//creation de bean Personne
+	
+	Personne personne = new Personne();
+	personne.setNom(nom);
+	personne.setPrenom(prenom);
+	personne.setEmail(email);
+	personne.setLogin(login);
+	personne.setMdp(null);
+	
+	//creation de la session
 	HttpSession maSession=request.getSession(true);
 	
+	//enregistrement de la session de la personne
 	maSession.setAttribute("nom", nom);
 	maSession.setAttribute("prenom", prenom);
 	maSession.setAttribute("email", email);
