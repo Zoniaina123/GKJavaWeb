@@ -11,8 +11,8 @@ public class DataUtil {
 		d = new Date();
 	}
 	
-	public Date getD() {
-		return d;
+	public String getD() {
+		return getCurrentDate();
 	}
 	
 	public String getCurrentDate() {
