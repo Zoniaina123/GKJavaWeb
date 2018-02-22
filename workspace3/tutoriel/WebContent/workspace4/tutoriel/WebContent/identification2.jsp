@@ -11,7 +11,7 @@
 <h2 align="center"><font color="darkblue">FORMULAIRE</font></h2>
 </head>
 
-
+<jsp:useBean id="todate" class="com.formation.tools.DataUtil"/>
 
 <body>
 
@@ -21,7 +21,7 @@
 
 <form method='post' action="MyServletIdentification2">
 
-<p align="center">Bonjour, nous sommes le <i><font color="blue"> <%= new DataUtil()%></font></i></p>
+<p align="center">Bonjour, nous sommes le <i><font color="blue"> <jsp:getProperty property="d" name="todate" /></font></i></p>
 <TABLE align="center">
 	<tr>
 		<td><b>Nom :</b></td>
